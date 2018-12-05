@@ -37,10 +37,36 @@ Route::get('registro.usuario',[
 ]);
 
 
-Route::get('crear.usuario',[
+Route::post('crear.usuario',[
     'as'=>'crear.usuario',
     'uses'=>'usuarios@crearusuario'
 ]);
+
+
+Route::post('login',[
+    'as'=>'login',
+    'uses'=>'seguridad@entrar'
+]);
+
+Route::get('logout',[
+    'as'=>'logout',
+    'uses'=>'seguridad@logout'
+]);
+
+
+
+
+Route::get('menu',[
+    'as'=>'menu',
+    'uses'=>'seguridad@menu'
+]);
+
+
+Route::get('perfil',[
+    'as'=>'perfil',
+    'uses'=>'seguridad@perfil'
+]);
+
 
 
 

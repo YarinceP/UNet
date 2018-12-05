@@ -15,7 +15,12 @@ class AddUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->string('nombre');
+            $table->string('apellido');
+            $table->string('alias');
+            $table->date('fecha_nacimiento');
+            $table->string('email',150);
+            $table->string('password');
         });
     }
 

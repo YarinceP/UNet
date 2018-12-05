@@ -36,8 +36,9 @@
     <div class="register-box-body">
         <p class="login-box-msg">Register a new membership</p>
 
-        <form action="" method="post">
+        <form action="{{ url('crear.usuario')}}"   method="post">
 
+            @csrf
             <div class="form-group has-feedback">
                 <input type="text" name="nombre" class="form-control" placeholder="Nombre">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -83,7 +84,9 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+
+
+                    <button type="submit"  >Register</button>
                 </div>
                 <!-- /.col -->
             </div>
